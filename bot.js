@@ -1,4 +1,3 @@
-const keepAlive = require ('./server.js')
 let Discord;
 let Database;
 if (typeof window !== "undefined") {
@@ -54,7 +53,6 @@ s4d.client.login(process.env.TOKEN).catch((e) => {
     s4d.tokenInvalid = true;
     s4d.tokenError = e;
 });
-keepAlive()
 s4d.client.on('ready', async () => {
 
     while (s4d.client && s4d.client.token) {
